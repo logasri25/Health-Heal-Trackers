@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons Centered</title>
+      <link rel="icon" href="logo.png" type="image/x-icon" />
+
+  <style>
+    /* Make the body take the full height of the viewport */
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center; /* Centers buttons horizontally */
+      align-items: center;  
+      background-image: url('organs.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;  
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;  /* Allow buttons to wrap to the next line */
+      gap: 20px;        /* Space between buttons */
+      justify-content: center; /* Centers the buttons within the container */
+      width: 80%;        /* Adjust the width of the container (optional) */
+    }
+
+    .button-container button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      flex: 1 1 30%;  /* Each button takes up 30% of the container width */
+      box-sizing: border-box; /* Ensures padding doesn't overflow the button size */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="button-container">
+    <button><a href="brain.html">Brain</a></button>
+    <button><a href="heart.html">Heart</a></button>
+    <button><a href="liver.html">Liver</a></button>
+    <button><a href="kidney.html">Kidneys</a></button>
+    <button><a href="stomach.html">Stomach</a></button>
+    <button><a href="Intestine.html">Intestine</a></button>
+    <button><a href="pancreas.html">Pancreas</a></button>
+    <button><a href="spleen.html">Spleen</a></button>
+    <button><a href="skin.html">Skin</a></button>
+    <button><a href="eyes.html">Eyes</a></button>
+    <button><a href="ears.html">Ears</a></button>
+    <button><a href="bladder.html">Bladder</a></button>
+    <button><a href="reporg.html">Reproductive Organs</a></button>
+    <button><a href="bone.html">Bones</a></button>
+    <button><a href="thygla.html">Thyroid Gland</a></button>
+    <button><a href="eso.html">Esophagus</a></button>
+    <button><a href="skull.html">Skull</a></button>
+    <button><a href="lungs.html">Lungs</a></button>
+
+    
+  </div>
+
+</body>
+</html>

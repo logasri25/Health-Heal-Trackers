@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h2 { text-align: center;}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Registration Form</title>
+        <link rel="icon" href="logo.png" type="image/x-icon" />
+
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-group button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        .scrollable {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Health Registration Form</h2>
+        
+        <form id="healthRegistrationForm">
+            <!-- Name Input -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Age Input -->
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <!-- Gender Selection (Radio Buttons) -->
+            <form class="form-group">
+                <label>Gender</label><br><br>
+                <input type="radio" id="male" name="gender" value="Male" > <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female"> <label for="female">Female</label>
+                <input type="radio" id="transgender" name="gender" value="transgender"> <label for="female">Transgender</label>
+                               
+            </form>
+            <br>
+            <br>
+
+            <!-- Contact Number -->
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+
+            <!-- District Selection -->
+            <div class="form-group">
+                <label for="district">Select District</label>
+                <select id="district" name="district" required>
+                    <option value="">Select a district</option>
+                    <option value="Ariyalur">Ariyalur</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Cuddalore">Cuddalore</option>
+                    <option value="Dharmapuri">Dharmapuri</option>
+                    <option value="Dindigul">Dindigul</option>
+                    <option value="Erode">Erode</option>
+                    <option value="Kancheepuram">Kancheepuram</option>
+                    <option value="Kanyakumari">Kanyakumari</option>
+                    <option value="Karur">Karur</option>
+                    <option value="Krishnagiri">Krishnagiri</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Nagapattinam">Nagapattinam</option>
+                    <option value="Namakkal">Namakkal</option>
+                    <option value="Perambalur">Perambalur</option>
+                    <option value="Pudukottai">Pudukottai</option>
+                    <option value="Ramanathapuram">Ramanathapuram</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Sivagangai">Sivagangai</option>
+                    <option value="Tenkasi">Tenkasi</option>
+                    <option value="Thanjavur">Thanjavur</option>
+                    <option value="The Nilgiris">The Nilgiris</option>
+                    <option value="Theni">Theni</option>
+                    <option value="Thoothukudi">Thoothukudi</option>
+                    <option value="Thiruvannamalai">Thiruvannamalai</option>
+                    <option value="Tiruchirappalli">Tiruchirappalli</option>
+                    <option value="Tirunelveli">Tirunelveli</option>
+                    <option value="Tiruvarur">Tiruvarur</option>
+                    <option value="Vellore">Vellore</option>
+                    <option value="Viluppuram">Viluppuram</option>
+                    <option value="Virudhunagar">Virudhunagar</option>
+                </select>
+            </div>
+
+            <!-- Hospital Selection -->
+            <div class="form-group">
+                <label for="hospital">Select Hospital</label>
+                <select id="hospital" name="hospital" required>
+                    <!-- Dynamic hospital options will be added here -->
+                </select>
+            </div>
+
+            <!-- Has this issue occurred before (Checkbox) -->
+            <form class="form-group">
+                <label>Has this issue occurred before?</label>
+                <input type="radio" id="Yes" name="Has this issue occurred before?" value="Yes"> <label for="Yes">Yes</label>
+                <input type="radio" id="No" name="Has this issue occurred before?" value="No"> <label for="No">No</label>
+            </form>
+
+            <!-- Sudden Health Issues (selection) -->
+            <div class="form-group">
+                <label for="district">Sudden Health Issues</label>
+                <select id="district" name="district" required>
+                    <option value="">Select a issue</option>
+                    <option value="Accident"> Accident</option>
+                    <option value="Heart Attack">Heart Attack</option>
+                    <option value="Cardiac Arrhythmia">Cardiac Arrhythmia</option>
+                    <option value="Stroke">Stroke</option>
+                    <option value="Cerebral Aneurysm">Cerebral Aneurysm</option>
+                    <option value="Seizures">Seizures</option>
+                    <option value="Stroke-like Symptoms (Transient Ischemic Attack)">Stroke-like Symptoms (Transient Ischemic Attack)</option>
+                    <option value="Severe Migraine or Cluster Headache">Severe Migraine or Cluster Headache</option>
+                    <option value="Asthma Attack">Asthma Attack</option>
+                    <option value="Pulmonary Embolism">Pulmonary Embolism</option>
+                    <option value="Pneumothorax (Collapsed Lung)">Pneumothorax (Collapsed Lung)</option>
+                    <option value="Severe Infection (Sepsis)">Severe Infection (Sepsis)</option>
+                    <option value="Drug Overdose">Drug Overdose</option>
+                    <option value="Heatstroke">Heatstroke</option>
+                    <option value="Hypothermia">Hypothermia></option>
+                    <option value="Diabetic Emergency (Hypoglycemia or Hyperglycemia)">Diabetic Emergency (Hypoglycemia or Hyperglycemia)</option>
+                    <option value="Acute Pancreatitis">Acute Pancreatitis</option>
+                    <option value="Acute Kidney Failure">Acute Kidney Failure</option>
+                    <option value="Gastric Bleeding">Gastric Bleeding</option>
+                    <option value="Severe Abdominal Pain (Appendicitis, Gallstones, Bowel Obstruction)">Severe Abdominal Pain (Appendicitis, Gallstones, Bowel Obstruction)</option>
+                    <option value="Appendicitis">Appendicitis</option>
+                    <option value="Deep Vein Thrombosis (DVT)">Deep Vein Thrombosis (DVT)</option>
+                    <option value=" Severe Dehydration">Severe Dehydration </option>
+                    <option value="Acute Anxiety Attack">Acute Anxiety Attack</option>
+                    
+                </select>
+            </div>
+
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit"><a href="msg.html">submit</a></button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle hospital selection based on the district
+        const districtSelect = document.getElementById("district");
+        const hospitalSelect = document.getElementById("hospital");
+
+        const hospitalsByDistrict = {
+            "Ariyalur": ["Government Hospital - Ariyalur", "Sri Venkateswara Hospital - Ariyalur"],
+            "Chennai": ["Government General Hospital - Park Town", "Apollo Hospitals - Greams Road", "MIOT International Hospital", "Fortis Malar Hospital"],
+            "Coimbatore": ["Government Hospital - Coimbatore", "Kovai Medical Center", "PSG Hospitals", "Cauvery Hospital"],
+            "Cuddalore": ["Government Hospital - Cuddalore", "Sri Raghavendra Hospital"],
+            "Dharmapuri": ["Government Hospital - Dharmapuri", "Sri Muthumari Hospital"],
+            "Dindigul": ["Government Hospital - Dindigul", "Sree Ayyappa Hospital"],
+            "Erode": ["Government Hospital - Erode", "Kovai Medical Center & Hospital"],
+            "Kancheepuram": ["Government Hospital - Kancheepuram", "Sri Varadaraja Hospital"],
+            "Kanyakumari": ["Government Hospital - Nagercoil", "Sree Mookambika Medical College & Hospital"],
+            "Karur": ["Government Hospital - Karur", "Sri Sakthi Hospital"],
+            "Krishnagiri": ["Government Hospital - Krishnagiri", "Sri Raghavendra Hospital"],
+            "Madurai": ["Government Rajaji Hospital - Madurai", "Meenakshi Mission Hospital", "Apollo Hospitals - Madurai"],
+            "Nagapattinam": ["Government Hospital - Nagapattinam", "Sree Kumaran Hospital"],
+            "Namakkal": ["Government Hospital - Namakkal", "Sri Raghavendra Hospital"],
+            "Perambalur": ["Government Hospital - Perambalur", "Sri Raghavendra Hospital"],
+            "Pudukottai": ["Government Hospital - Pudukottai", "Sree Ayyappa Hospital"],
+            "Ramanathapuram": ["Government Hospital - Ramanathapuram", "Sri Ayyappa Hospital"],
+            "Salem": ["Government Mohan Kumaramangalam Medical College & Hospital", "PSG Hospitals"],
+            "Sivagangai": ["Government Hospital - Sivagangai", "Sri Sakthi Hospital"],
+            "Tenkasi": ["Government Hospital - Tenkasi", "Sri Meenakshi Hospital"],
+            "Thanjavur": ["Rajah Muthiah Medical College & Hospital", "Sree Ayyappa Hospital"],
+            "The Nilgiris": ["Government Hospital - Udhagamandalam", "Coonoor Hospital"],
+            "Theni": ["Government Hospital - Theni", "Sri Raghavendra Hospital"],
+            "Thoothukudi": ["Government Hospital - Thoothukudi", "Sri Meenakshi Hospital"],
+            "Tiruchirappalli": ["Government Hospital - Tiruchirappalli", "MGM Healthcare", "Kavery Medical Center"],
+            "Tirunelveli": ["Government Medical College Hospital - Tirunelveli", "Cauvery Hospital"],
+            "Tiruvarur": ["Government Hospital - Tiruvarur", "Sree Kumaran Hospital"],
+            "Vellore": ["Christian Medical College - Vellore", "Vellore Institute of Technology Hospital"],
+            "Viluppuram": ["Government Hospital - Viluppuram", "Sri Ayyappa Hospital"],
+            "Virudhunagar": ["Government Hospital - Virudhunagar", "Sri Sakthi Hospital"],
+           
+        };
+
+        districtSelect.addEventListener('change', function() {
+            const selectedDistrict = districtSelect.value;
+            const hospitals = hospitalsByDistrict[selectedDistrict] || [];
+            hospitalSelect.innerHTML = "";  // Clear existing options
+            hospitals.forEach(hospital => {
+                const option = document.createElement("option");
+                option.value = hospital;
+                option.textContent = hospital;
+                hospitalSelect.appendChild(option);
+            });
+        });
+
+        // Form submission handler
+        document.getElementById("healthRegistrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const contact = document.getElementById("contact").value;
+            const issueOccurred = document.getElementById("issue_occurred").checked ? "Yes" : "No";
+            const suddenIssues = Array.from(document.querySelectorAll('input[name="sudden_issues"]:checked')).map(el => el.value).join(", ");
+            const district = districtSelect.value;
+            const hospital = hospitalSelect.value;
+
+            alert(`Registration Summary:
+                Name: ${name}
+                Age: ${age}
+                Gender: ${gender}
+                Contact: ${contact}
+                Issue Occurred Before: ${issueOccurred}
+                Sudden Health Issues: ${suddenIssues}
+                Selected District: ${district}
+                Selected Hospital: ${hospital}
+            `);
+        });
+    </script>
+
+</body>
+</html>
